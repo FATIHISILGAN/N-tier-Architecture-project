@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EDFF4EC-9CE3-4D8F-9199-7C2FD4A46B64}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YönetimSistemi</RootNamespace>
+    <AssemblyName>YönetimSistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BussinessLogicLayer\TblKullanicilarBLL.cs" />
+    <Compile Include="BussinessLogicLayer\TblSiparisBLL.cs" />
+    <Compile Include="BussinessLogicLayer\TblStokBLL.cs" />
+    <Compile Include="DataAccessObjectLayer\TblKullanicilarDAO.cs" />
+    <Compile Include="DataAccessObjectLayer\TblSiparisDAO.cs" />
+    <Compile Include="DataAccessObjectLayer\TblStokDAO.cs" />
+    <Compile Include="PocosLayer\TblSiparisPoco.cs" />
+    <Compile Include="PocosLayer\TblStokPoco.cs" />
+    <Compile Include="PresantationLayer\AnaMenü.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\AnaMenü.Designer.cs">
+      <DependentUpon>AnaMenü.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\kullanicilar\KullaniciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\kullanicilar\KullaniciEkle.Designer.cs">
+      <DependentUpon>KullaniciEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\kullanicilar\KullaniciGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\kullanicilar\KullaniciGuncelle.Designer.cs">
+      <DependentUpon>KullaniciGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\kullanicilar\KullaniciListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\kullanicilar\KullaniciListele.Designer.cs">
+      <DependentUpon>KullaniciListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\kullanicilar\KullaniciSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\kullanicilar\KullaniciSil.Designer.cs">
+      <DependentUpon>KullaniciSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\OturumAcmaEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\OturumAcmaEkrani.Designer.cs">
+      <DependentUpon>OturumAcmaEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PocosLayer\TblKullanicilarPoco.cs" />
+    <Compile Include="PresantationLayer\Projeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Projeler.Designer.cs">
+      <DependentUpon>Projeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\ProjeOpen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\ProjeOpen.Designer.cs">
+      <DependentUpon>ProjeOpen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Siparis\SiparisEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Siparis\SiparisEkle.Designer.cs">
+      <DependentUpon>SiparisEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Siparis\SiparisGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Siparis\SiparisGuncelle.Designer.cs">
+      <DependentUpon>SiparisGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Siparis\SiparisListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Siparis\SiparisListele.Designer.cs">
+      <DependentUpon>SiparisListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\Siparis\SiparisSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\Siparis\SiparisSil.Designer.cs">
+      <DependentUpon>SiparisSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\stok\UrunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\stok\UrunEkle.Designer.cs">
+      <DependentUpon>UrunEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\stok\UrunGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\stok\UrunGuncelle.Designer.cs">
+      <DependentUpon>UrunGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\stok\UrunListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\stok\UrunListele.Designer.cs">
+      <DependentUpon>UrunListele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresantationLayer\stok\UrunSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresantationLayer\stok\UrunSil.Designer.cs">
+      <DependentUpon>UrunSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vtBağlanti\VtBağlanti.cs" />
+    <EmbeddedResource Include="PresantationLayer\AnaMenü.resx">
+      <DependentUpon>AnaMenü.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\kullanicilar\KullaniciEkle.resx">
+      <DependentUpon>KullaniciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\kullanicilar\KullaniciGuncelle.resx">
+      <DependentUpon>KullaniciGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\kullanicilar\KullaniciListele.resx">
+      <DependentUpon>KullaniciListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\kullanicilar\KullaniciSil.resx">
+      <DependentUpon>KullaniciSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\OturumAcmaEkrani.resx">
+      <DependentUpon>OturumAcmaEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Projeler.resx">
+      <DependentUpon>Projeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\ProjeOpen.resx">
+      <DependentUpon>ProjeOpen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Siparis\SiparisEkle.resx">
+      <DependentUpon>SiparisEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Siparis\SiparisGuncelle.resx">
+      <DependentUpon>SiparisGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Siparis\SiparisListele.resx">
+      <DependentUpon>SiparisListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\Siparis\SiparisSil.resx">
+      <DependentUpon>SiparisSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\stok\UrunEkle.resx">
+      <DependentUpon>UrunEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\stok\UrunGuncelle.resx">
+      <DependentUpon>UrunGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\stok\UrunListele.resx">
+      <DependentUpon>UrunListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresantationLayer\stok\UrunSil.resx">
+      <DependentUpon>UrunSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\bussiness.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
